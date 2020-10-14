@@ -86,12 +86,40 @@ namespace Forces
 
         private void Button2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+        //use code
+        try
+        {
+            //Read text from textboxes
             double Force = double.Parse(textBox1.Text);
             double Angle = double.Parse(textBox2.Text);
+            //Calculate forces Fx and Fy
             double Fx = Force * cos(Angle);
             double Fy = Force * sin(Angle);
+            //Outpit answers to labels
             label1.Text = "Fx = " + Fx;
             label2.Text = "Fy = " + Fy;
         }
+            //use catch to output error message
+            catch
+       {
+            MessageBox.Show("Error on input.");
+       }
+
+}
+            
+
+        
+        
+}
+           
+
+
     }
 }
